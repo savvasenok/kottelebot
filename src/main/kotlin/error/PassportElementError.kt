@@ -1,0 +1,3 @@
+package error
+
+abstract class PassportElementError

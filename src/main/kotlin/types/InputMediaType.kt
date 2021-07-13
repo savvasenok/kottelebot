@@ -5,5 +5,6 @@ enum class InputMediaType {
     DOCUMENT,
     AUDIO,
     PHOTO,
-    VIDEO
+    VIDEO,
+    OTHER
 }

@@ -7,5 +7,6 @@ enum class BotCommandScopeType {
     ALL_CHAT_ADMINISTRATORS,
     CHAT,
     CHAT_ADMINISTRATORS,
-    CHAT_MEMBER
+    CHAT_MEMBER,
+    OTHER
 }

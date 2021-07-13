@@ -1,3 +1,6 @@
 package entity
 
-/*data*/ class PassportData
+data class PassportData(
+    val data: ArrayList<EncryptedPassportElement>,
+    val credentials: EncryptedCredentials
+)

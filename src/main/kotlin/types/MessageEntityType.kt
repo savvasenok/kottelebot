@@ -15,5 +15,6 @@ enum class MessageEntityType {
     CODE,
     PRE,
     TEXT_LINK,
-    TEXT_MENTION
+    TEXT_MENTION,
+    OTHER
 }

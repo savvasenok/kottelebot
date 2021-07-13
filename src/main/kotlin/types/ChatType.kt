@@ -1,5 +1,5 @@
 package types
 
 enum class ChatType {
-    PRIVATE, GROUP, SUPERGROUP, CHANNEL
+    PRIVATE, GROUP, SUPERGROUP, CHANNEL, OTHER
 }
