@@ -1,9 +1,11 @@
 package entity.chat.member
 
 import entity.User
+import kotlinx.serialization.Serializable
 import types.ChatMemberType
 
-abstract class ChatMember(
-    open val status: ChatMemberType,
-    open val user: User
-)
+@Serializable
+abstract class ChatMember {
+    abstract val status: ChatMemberType
+    abstract val user: User
+}

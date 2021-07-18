@@ -1,16 +1,19 @@
 package entity.sticker
 
 import entity.media.PhotoSize
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Sticker(
-    val fileId: String,
-    val fileUniqueId: String,
+    @SerialName("file_id") val fileId: String,
+    @SerialName("file_unique_id") val fileUniqueId: String,
     val width: Int,
     val height: Int,
-    val isAnimated: Boolean,
-    val thumb: PhotoSize?,
-    val emoji: String?,
-    val setName: String?,
-    val maskPosition: MaskPosition?,
-    val fileSize: Int
+    @SerialName("is_animated") val isAnimated: Boolean,
+    val thumb: PhotoSize? = null,
+    val emoji: String? = null,
+    @SerialName("set_name") val setName: String? = null,
+    @SerialName("mask_position") val maskPosition: MaskPosition? = null,
+    @SerialName("file_size") val fileSize: Int? = null
 )

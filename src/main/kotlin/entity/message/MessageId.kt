@@ -1,5 +1,9 @@
 package entity.message
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class MessageId(
-    val messageId: Double
+    @SerialName("message_id") val messageId: Long
 )

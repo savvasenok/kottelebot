@@ -1,7 +1,11 @@
 package entity
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ForceReply(
-    val forceReply: Boolean = true,
-    val inputFieldPlaceholder: String,
+    @SerialName("force_reply") val forceReply: Boolean = true,
+    @SerialName("input_field_placeholder") val inputFieldPlaceholder: String,
     val selective: Boolean
 )

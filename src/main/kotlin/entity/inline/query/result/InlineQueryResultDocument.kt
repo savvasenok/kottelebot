@@ -3,24 +3,27 @@ package entity.inline.query.result
 import entity.input.content.InputMessageContent
 import entity.message.MessageEntity
 import entity.inline.keyboard.InlineKeyboardMarkup
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import types.DocumentMimeType
 import types.InlineQueryResultType
 import types.ParseMode
 
+@Serializable
 data class InlineQueryResultDocument(
     override val id: String,
     val title: String,
-    val documentUrl: String,
-    val mimeType: DocumentMimeType,
-    val description: String?,
-    val caption: String?,
-    val parseMode: ParseMode?,
-    val captionEntities: ArrayList<MessageEntity>?,
-    val replyMarkup: InlineKeyboardMarkup,
-    val inputMessageContent: InputMessageContent?,
-    val thumbUrl: String?,
-    val thumbWidth: Int?,
-    val thumbHeight: Int?
+    @SerialName("document_url") val documentUrl: String,
+    @SerialName("mime_type") val mimeType: DocumentMimeType,
+    val description: String? = null,
+    val caption: String? = null,
+    @SerialName("parse_mode") val parseMode: ParseMode? = null,
+    @SerialName("caption_entities") val captionEntities: ArrayList<MessageEntity>? = null,
+    @SerialName("reply_markup") val replyMarkup: InlineKeyboardMarkup? = null,
+    @SerialName("input_message_content") val inputMessageContent: InputMessageContent? = null,
+    @SerialName("thumb_url") val thumbUrl: String? = null,
+    @SerialName("thumb_width") val thumbWidth: Int? = null,
+    @SerialName("thumb_height") val thumbHeight: Int? = null
 ) : InlineQueryResult() {
     override val type = InlineQueryResultType.VOICE
 }

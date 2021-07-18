@@ -1,11 +1,15 @@
 package entity
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class SuccessfulPayment(
     val currency: String,
-    val totalAmount: Int,
-    val invoicePayload: String,
-    val shippingOptionId: String?,
-    val orderInfo: OrderInfo?,
-    val telegramPaymentChargeId: String,
-    val providerPaymentChargeId: String
+    @SerialName("total_amount") val totalAmount: Int,
+    @SerialName("invoice_payload") val invoicePayload: String,
+    @SerialName("shipping_option_id") val shippingOptionId: String? = null,
+    @SerialName("order_info") val orderInfo: OrderInfo? = null,
+    @SerialName("telegram_payment_charge_id") val telegramPaymentChargeId: String,
+    @SerialName("provider_payment_charge_id") val providerPaymentChargeId: String
 )

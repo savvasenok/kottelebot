@@ -1,5 +1,9 @@
 package entity.message
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class MessageAutoDeleteTimerChanged(
-    val messageAutoDeleteTime: Int
+    @SerialName("message_auto_delete_time") val messageAutoDeleteTime: Int
 )

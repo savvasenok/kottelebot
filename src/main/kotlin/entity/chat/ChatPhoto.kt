@@ -1,8 +1,12 @@
 package entity.chat
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ChatPhoto(
-    val smallFileId: String,
-    val smallFilUniqueId: String,
-    val bigFileId: String,
-    val bigFileUniqueId: String,
+    @SerialName("small_file_id") val smallFileId: String,
+    @SerialName("small_file_unique_id") val smallFilUniqueId: String,
+    @SerialName("big_file_id") val bigFileId: String,
+    @SerialName("big_file_unique_id") val bigFileUniqueId: String,
 )

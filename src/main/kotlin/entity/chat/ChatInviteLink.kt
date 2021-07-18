@@ -1,12 +1,15 @@
 package entity.chat
 
 import entity.User
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class ChatInviteLink(
-    val inviteLink: String,
+    @SerialName("invite_link") val inviteLink: String,
     val creator: User,
-    val isPrimary: Boolean,
-    val isRevoked: Boolean,
-    val expireDate: Int?,
-    val memberLimit: Int?,
+    @SerialName("is_primary") val isPrimary: Boolean,
+    @SerialName("is_revoked") val isRevoked: Boolean,
+    @SerialName("expire_date") val expireDate: Int? = null,
+    @SerialName("member_limit") val memberLimit: Int? = null,
 )

@@ -2,11 +2,14 @@ package entity.inline
 
 import entity.Location
 import entity.User
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class ChosenInlineResult(
-    val resultId: String,
+    @SerialName("") val resultId: String,
     val from: User,
-    val location: Location?,
-    val inlineMessageId: String?,
+    val location: Location? = null,
+    val inlineMessageId: String? = null,
     val query: String
 )

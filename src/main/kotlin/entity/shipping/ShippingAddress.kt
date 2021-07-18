@@ -1,10 +1,14 @@
 package entity.shipping
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ShippingAddress(
-    val countryCode: String,
+    @SerialName("country_code") val countryCode: String,
     val state: String,
     val city: String,
-    val streetLine1: String,
-    val streetLine2: String,
-    val postCode: String
+    @SerialName("street_line_1") val streetLine1: String,
+    @SerialName("street_line_2") val streetLine2: String,
+    @SerialName("post_code") val postCode: String
 )

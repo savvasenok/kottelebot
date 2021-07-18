@@ -1,5 +1,9 @@
 package entity.voice.chat
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class VoiceChatScheduled(
-    val startDate: Int
+    @SerialName("start_date") val startDate: Int
 )

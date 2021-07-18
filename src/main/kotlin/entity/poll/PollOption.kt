@@ -1,6 +1,10 @@
 package entity.poll
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class PollOption(
     val text: String,
-    val voterCount: Int
+    @SerialName("voter_count") val voterCount: Int
 )

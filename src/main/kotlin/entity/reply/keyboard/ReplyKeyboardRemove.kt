@@ -1,6 +1,10 @@
 package entity.reply.keyboard
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class ReplyKeyboardRemove(
-    val removeKeyboard: Boolean = true,
-    val selective: Boolean?
+    @SerialName("remove_keyboard") val removeKeyboard: Boolean = true,
+    val selective: Boolean? = null
 )

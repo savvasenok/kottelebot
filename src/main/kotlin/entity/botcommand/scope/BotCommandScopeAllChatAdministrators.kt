@@ -1,7 +1,9 @@
 package entity.botcommand.scope
 
+import kotlinx.serialization.Serializable
 import types.BotCommandScopeType
 
+@Serializable
 data class BotCommandScopeAllChatAdministrators(
     private val placeholder: Unit = Unit
 ) : BotCommandScope() {

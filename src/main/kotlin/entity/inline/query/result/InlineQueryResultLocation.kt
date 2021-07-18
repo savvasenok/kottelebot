@@ -2,22 +2,25 @@ package entity.inline.query.result
 
 import entity.inline.keyboard.InlineKeyboardMarkup
 import entity.input.content.InputMessageContent
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import types.InlineQueryResultType
 
+@Serializable
 data class InlineQueryResultLocation(
     override val id: String,
     val latitude: Float,
     val longitude: Float,
     val title: String,
-    val horizontalAccuracy: Int?,
-    val livePeriod: Int?,
-    val heading: Int?,
-    val proximityAlertRadius: Int?,
-    val replyMarkup: InlineKeyboardMarkup?,
-    val inputMessageContent: InputMessageContent?,
-    val thumbUrl: String?,
-    val thumbWidth: Int?,
-    val thumbHeight: Int?
+    @SerialName("horizontal_accuracy") val horizontalAccuracy: Int? = null,
+    @SerialName("live_period") val livePeriod: Int? = null,
+    val heading: Int? = null,
+    @SerialName("proximity_alert_radius") val proximityAlertRadius: Int? = null,
+    @SerialName("reply_markup") val replyMarkup: InlineKeyboardMarkup? = null,
+    @SerialName("input_message_content") val inputMessageContent: InputMessageContent? = null,
+    @SerialName("thumb_url") val thumbUrl: String? = null,
+    @SerialName("thumb_width") val thumbWidth: Int? = null,
+    @SerialName("thumb_height") val thumbHeight: Int? = null
 ) : InlineQueryResult() {
     override val type = InlineQueryResultType.LOCATION
 }

@@ -1,9 +1,13 @@
 package entity.voice
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Voice(
-    val fileId: String,
-    val fileUniqueId: String,
+    @SerialName("file_id") val fileId: String,
+    @SerialName("file_unique_id") val fileUniqueId: String,
     val duration: Int,
-    val mimeType: String?,
-    val fileSize: Int?
+    @SerialName("mime_type") val mimeType: String? = null,
+    @SerialName("file_size") val fileSize: Int? = null
 )
