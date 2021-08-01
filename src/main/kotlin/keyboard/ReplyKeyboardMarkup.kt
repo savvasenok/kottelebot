@@ -1,5 +1,6 @@
-package entity.reply.keyboard
+package keyboard
 
+import entity.reply.keyboard.ReplyKeyboardButton
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -10,4 +11,4 @@ data class ReplyKeyboardMarkup(
     @SerialName("one_time_keyboard") val oneTimeKeyboard: Boolean? = null,
     @SerialName("input_field_placeholder") val inputFieldPlaceholder: String? = null,
     val selective: Boolean
-)
+) : Keyboard

@@ -1,7 +1,7 @@
 package entity.inline.query.result
 
-import entity.inline.keyboard.InlineKeyboardMarkup
 import entity.message.MessageEntity
+import keyboard.InlineKeyboardMarkup
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import types.InlineQueryResultType

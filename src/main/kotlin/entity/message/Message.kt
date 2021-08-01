@@ -3,17 +3,17 @@ package entity.message
 import entity.*
 import entity.chat.Chat
 import entity.game.Game
-import entity.inline.keyboard.InlineKeyboardMarkup
 import entity.media.*
 import entity.poll.Poll
 import entity.sticker.Sticker
 import entity.video.Video
 import entity.video.VideoNote
-import entity.voice.*
+import entity.voice.Voice
 import entity.voice.chat.VoiceChatEnded
 import entity.voice.chat.VoiceChatParticipantsInvited
 import entity.voice.chat.VoiceChatScheduled
 import entity.voice.chat.VoiceChatStarted
+import keyboard.InlineKeyboardMarkup
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

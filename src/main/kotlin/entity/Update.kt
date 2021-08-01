@@ -1,0 +1,28 @@
+package entity
+
+import entity.chat.member.ChatMemberUpdated
+import entity.inline.query.InlineQuery
+import entity.message.Message
+import entity.poll.Poll
+import entity.poll.PollAnswer
+import entity.shipping.ShippingQuery
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Update(
+    @SerialName("update_id") val updateId: Long,
+    val message: Message? = null,
+    @SerialName("edited_message") val editedMessage: Message? = null,
+    @SerialName("channelPost") val channelPost: Message? = null,
+    @SerialName("edited_channel_post") val editedChannelPost: Message? = null,
+    @SerialName("inline_query") val inlineQuery: InlineQuery? = null,
+    @SerialName("chosen_inline_result") val chosenInlineResult: ChosenInlineResult? = null,
+    @SerialName("callback_query") val callbackQuery: CallbackQuery? = null,
+    @SerialName("shipping_query") val shippingQuery: ShippingQuery? = null,
+    @SerialName("pre_checkout_Query") val preCheckoutQuery: PreCheckoutQuery? = null,
+    val poll: Poll? = null,
+    @SerialName("poll_answer") val pollAnswer: PollAnswer? = null,
+    @SerialName("my_chat_member") val myChatMember: ChatMemberUpdated? = null,
+    @SerialName("chat_member") val chatMember: ChatMemberUpdated? = null
+)
